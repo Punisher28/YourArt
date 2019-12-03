@@ -12,12 +12,14 @@ class Products extends Component {
     }
 
     componentWillMount() {
-        axios.get('http://127.0.0.1:8000/admin/users')
+        axios.get('http://127.0.0.1:8000/admin/products')
             .then(res => {
-                this.setState({data: res.data})
-                console.log(this.state.data)
-                this.setState({loader: true});
-
+                if (res.data) {
+                    this.setState({data: res.data});
+                    console.log(res.data.length);
+                    console.log(this.state.data);
+                    this.setState({loader: true});
+                }
             })
             .catch((e) => {
                 console.log(e)
@@ -34,13 +36,10 @@ class Products extends Component {
                             <thead>
                             <tr>
                                 <th>id</th>
-                                <th>Login</th>
-                                <th>First_name</th>
-                                <th>Surname</th>
-                                <th>Email</th>
-                                <th>Ip</th>
-                                <th>Payment</th>
-                                <th>Tel</th>
+                                <th>Category</th>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Author</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -51,13 +50,8 @@ class Products extends Component {
                                     <td>{object.first_name}</td>
                                     <td>{object.surname}</td>
                                     <td>{object.email}</td>
-                                    <td>{object.ip_address}</td>
-                                    <td>{object.payment_verified}</td>
-                                    <td>{object.tel_number}</td>
-
                                 </tr>
                             ))}
-
                             </tbody>
                         </table>
                     </div>

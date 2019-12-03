@@ -53,7 +53,6 @@ class Order extends Component {
                                     <td>{object.ip_address}</td>
                                     <td>{object.payment_verified}</td>
                                     <td>{object.tel_number}</td>
-
                                 </tr>
                             ))}
 

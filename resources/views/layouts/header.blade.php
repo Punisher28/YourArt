@@ -28,7 +28,7 @@
     <div class="container header">
         <div class="nav d-flex justify-content-between align-items-center">
             <a class="" href="/">
-                <img src="{{ asset('storage/logo.png') }}" height="100" width="230" alt="">
+                <img src="{{ asset('storage/logo1.png') }}" height="100" width="230" alt="">
             </a>
             <form action="/articles" method="get" class="form-inline">
                 <input class="form-control" name="search" type="search" placeholder="Пошук" aria-label="Search">

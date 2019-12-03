@@ -60660,7 +60660,7 @@ if (false) {} else {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -66755,16 +66755,19 @@ function (_Component) {
     value: function componentWillMount() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://127.0.0.1:8000/admin/users').then(function (res) {
-        _this2.setState({
-          data: res.data
-        });
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://127.0.0.1:8000/admin/products').then(function (res) {
+        if (res.data) {
+          _this2.setState({
+            data: res.data
+          });
 
-        console.log(_this2.state.data);
+          console.log(res.data.length);
+          console.log(_this2.state.data);
 
-        _this2.setState({
-          loader: true
-        });
+          _this2.setState({
+            loader: true
+          });
+        }
       })["catch"](function (e) {
         console.log(e);
       });
@@ -66779,10 +66782,10 @@ function (_Component) {
         className: "table-responsive"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
         className: "table table-striped table-sm"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "id"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Login"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "First_name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Surname"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Email"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Ip"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Payment"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Tel"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, this.state.data.map(function (object, index) {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "id"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Category"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Description"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Author"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, this.state.data.map(function (object, index) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
           key: index
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.login), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.first_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.surname), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.email), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.ip_address), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.payment_verified), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.tel_number));
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.login), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.first_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.surname), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.email));
       }))))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Spinner__WEBPACK_IMPORTED_MODULE_2__["default"], null);
     }
   }]);
