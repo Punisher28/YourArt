@@ -42,6 +42,11 @@ class HomeController extends Controller
         return view('profile')->with('orders', $orders)->with('buyers', $buyers)->with('info', $info)->with('image',$user_img);
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\JsonResponse|\Illuminate\Http\Response
+     *
+     */
     public function changePass(Request $request)
     {
         $user = Auth::user();
@@ -62,6 +67,19 @@ class HomeController extends Controller
         return response()->json(['success' => 'Успішно']);
     }
 
+    public function fetchTables(){
+        $tables = DB::select('SHOW TABLES');
+        foreach ($tables as $table) {
+            foreach ($table as $key => $value)
+                echo $value;
+        }
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws ValidationException
+     */
     public function changeImg(Request $request)
     {
         $this->validate($request, [

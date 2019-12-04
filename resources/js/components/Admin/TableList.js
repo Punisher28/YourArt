@@ -12,7 +12,7 @@ class TableList extends Component {
     }
 
     componentWillMount() {
-        axios.get('http://127.0.0.1:8000/admin/users')
+        axios.get('http://127.0.0.1:8000/admin/table_list')
             .then(res => {
                 this.setState({data: res.data})
                 console.log(this.state.data)

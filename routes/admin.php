@@ -15,24 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/users',function (Request $request){
-    return User::all();
-});
-Route::get('/orders',function (Request $request){
-    return User::all();
-});
-Route::get('/products',function (Request $request){
-    return Products::all();
-});
+Route::get('/users', 'App\Http\Controllers\Admin\AdminController@getUser')->name('users');
+Route::get('/orders','App\Http\Controllers\Admin\AdminController@getOrders');
+Route::get('/products','App\Http\Controllers\Admin\AdminController@getProducts');
 Route::get('/test/{id}-{slug}','ReportController@index');
-Route::get('/reports',function (Request $request){
-    return Report::all();
-});
-Route::get('/tb_list',function (Request $request){
-    return User::all();
-});
-Route::get('/settings',function (Request $request){
-    return User::all();
-});
+Route::get('/reports','App\Http\Controllers\Admin\AdminController@getReports');
+Route::get('/table_list','App\Http\Controllers\Admin\AdminController@getTablesList');
+Route::get('/settings','App\Http\Controllers\Admin\AdminController@getUser');
 
 Route::view('/{path?}', 'admin/app');
