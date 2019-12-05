@@ -96,11 +96,14 @@ class HomeController extends Controller
                 $img_usr->key=$user;
             }
             $file = $request->file('userImg');
+
+
             $ext = $file->getClientOriginalExtension();
             $date = Carbon::now()->format('dmY');
             $name=$user . $date . '.' . $ext;
             $path = Storage::putFileAs('public/uploads/user_img', $file,$name );
-            $img_usr->name ='/storage/uploads/user_img/'.$name;
+
+            $img_usr->name ='/storage/uploads/user_img/'.$name;dd($path);exit;
             $img_usr->type = '.' . $ext;
             $img_usr->size = $file->getSize();
             $img_usr->save();

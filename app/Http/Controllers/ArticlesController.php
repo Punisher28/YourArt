@@ -31,7 +31,7 @@ class ArticlesController extends Controller
         }
         $products=$products->paginate(12);
 
-        return view('Articles', compact(['products','categories']));
+        return view('articles', compact(['products','categories']));
     }
 
     public function view(Request $request, $id)
@@ -39,6 +39,6 @@ class ArticlesController extends Controller
         $product = Products::with(['category', 'image'])->find($id);
         $category=Category::where('id',$product->category->parent_id)->first();
    //dd($product->category->name);
-        return view("Item", compact('product','category'));
+        return view("item", compact('product','category'));
     }
 }

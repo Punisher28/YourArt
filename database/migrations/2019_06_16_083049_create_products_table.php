@@ -20,7 +20,8 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->char('description', 255);
             $table->decimal('price', 12, 2);
-            $table->string('size')->nullable();
+            $table->string('width')->default(0);
+            $table->string('height')->default(0);
             $table->boolean('status')->default(1);
             $table->string('author')->nullable();
             $table->boolean('auction')->default(0);
