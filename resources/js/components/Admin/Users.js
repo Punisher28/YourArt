@@ -54,13 +54,12 @@ class Users extends Component {
                                     <td>{object.ip_address}</td>
                                     <td>{object.payment_verified}</td>
                                     <td>{object.tel_number}</td>
-
                                 </tr>
                             ))}
-
                             </tbody>
                         </table>
                     </div>
+                    <div className="btn btn-primary">Add user</div>
                 </main>
             ) : (
                 <Spinner/>

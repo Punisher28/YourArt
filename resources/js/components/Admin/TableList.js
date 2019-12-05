@@ -34,30 +34,19 @@ class TableList extends Component {
                             <thead>
                             <tr>
                                 <th>id</th>
-                                <th>Login</th>
-                                <th>First_name</th>
-                                <th>Surname</th>
-                                <th>Email</th>
-                                <th>Ip</th>
-                                <th>Payment</th>
-                                <th>Tel</th>
+                                <th>Table</th>
+                                <th>Count Rows</th>
+
                             </tr>
                             </thead>
                             <tbody>
                             {this.state.data.map((object, index) => (
                                 <tr key={index}>
-                                    <td>{object.id}</td>
-                                    <td>{object.login}</td>
-                                    <td>{object.first_name}</td>
-                                    <td>{object.surname}</td>
-                                    <td>{object.email}</td>
-                                    <td>{object.ip_address}</td>
-                                    <td>{object.payment_verified}</td>
-                                    <td>{object.tel_number}</td>
-
+                                    <td>{index}</td>
+                                    <td>{object.name}</td>
+                                    <td>{object.rows}</td>
                                 </tr>
                             ))}
-
                             </tbody>
                         </table>
                     </div>

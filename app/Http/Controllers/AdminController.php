@@ -48,8 +48,9 @@ class AdminController extends Controller
         $tables = DB::select('SHOW TABLES');
         foreach ($tables as $table) {
             foreach ($table as $key => $value)
-                $tab_list[]=$value;
+                $tab_list[]=array('rows'=>DB::table($value)->count(),'name'=>$value);
         }
+
         return $tab_list;
     }
 
