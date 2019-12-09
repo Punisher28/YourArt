@@ -15,12 +15,12 @@ class AuthController extends Controller
     public $successStatus = 200;
 
     /**
-     * @param Request $request
-     * @return \Illuminate\Http\JsonResponse
+     * login api
+     *
+     * @return \Illuminate\Http\Response
      */
     public function login()
     {
-        var_dump(request('email'));
         if (Auth::attempt(['email' => request('email'), 'password' => request('password')])) {
             $user = Auth::user();
             $success['token'] = $user->createToken('MyApp')->accessToken;
@@ -31,12 +31,12 @@ class AuthController extends Controller
     }
 
     /**
-     * @param Request $request
-     * @return \Illuminate\Http\JsonResponse
+     * Register api
+     *
+     * @return \Illuminate\Http\Response
      */
     public function register(Request $request)
     {
-        var_dump($request->all());
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'email' => 'required|email',
@@ -55,8 +55,9 @@ class AuthController extends Controller
     }
 
     /**
-     * @param Request $request
-     * @return \Illuminate\Http\JsonResponse
+     * details api
+     *
+     * @return \Illuminate\Http\Response
      */
     public function details()
     {
@@ -64,10 +65,6 @@ class AuthController extends Controller
         return response()->json(['success' => $user], $this->successStatus);
     }
 
-    /**
-     * @param Request $request
-     * @return \Illuminate\Http\JsonResponse
-     */
     public function logout(Request $request)
     {
         $token = $request->user()->token();
@@ -75,5 +72,6 @@ class AuthController extends Controller
         Cookie::queue(Cookie::forget('token'));
         $response = ['message' => 'You have been succesfully logged out!', 'code' => 200];
         return response()->json($response, 200);
+
     }
 }
