@@ -12,7 +12,7 @@ class Order extends Component {
     }
 
     componentWillMount() {
-        axios.get('http://127.0.0.1:8000/admin/orders')
+        axios.get('https://testyourart.herokuapp.com/admin/orders')
             .then(async res => {
                 await this.setState({data: res.data});
                 console.log(this.state.data);

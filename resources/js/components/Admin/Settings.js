@@ -12,7 +12,7 @@ class Settings extends Component {
     }
 
     componentWillMount() {
-        axios.get('http://127.0.0.1:8000/admin/users')
+        axios.get('https://testyourart.herokuapp.com/admin/users')
             .then(res => {
                 this.setState({data: res.data})
                 console.log(this.state.data)

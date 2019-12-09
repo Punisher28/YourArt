@@ -12,7 +12,7 @@ class Products extends Component {
     }
 
     componentWillMount() {
-        axios.get('http://127.0.0.1:8000/admin/products')
+        axios.get('https://testyourart.herokuapp.com/admin/products')
             .then(res => {
                 if (res.data) {
                     this.setState({data: res.data});
