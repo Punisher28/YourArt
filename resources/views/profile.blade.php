@@ -4,20 +4,20 @@
     <hr>
     <div class="row">
         <div class="side col-sm-3">
-            <h3>Category</h3>
+            <br>
             <div class="nav  flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <a class="nav-link list-group-item" id="v-pills-home-tab" data-toggle="pill" href="#tab-profile"
                    role="tab"
-                   aria-controls="v-pills-home" aria-selected="true">Профіль</a>
+                   aria-controls="v-pills-home" aria-selected="true">Profile</a>
                 <a class="nav-link list-group-item" id="v-pills-profile-tab" data-toggle="pill" href="#tab-security"
                    role="tab"
-                   aria-controls="v-pills-profile" aria-selected="false">Безпека</a>
+                   aria-controls="v-pills-profile" aria-selected="false">Security</a>
                 <a class="nav-link list-group-item" id="v-pills-messages-tab" data-toggle="pill" href="#tab-orders"
                    role="tab"
-                   aria-controls="v-pills-messages" aria-selected="false">Замовлення</a>
+                   aria-controls="v-pills-messages" aria-selected="false">Buy list</a>
                 <a class="nav-link list-group-item" id="v-pills-settings-tab" data-toggle="pill" href="#tab-list"
                    role="tab"
-                   aria-controls="v-pills-settings" aria-selected="false">Список товарів</a>
+                   aria-controls="v-pills-settings" aria-selected="false">My Lots</a>
             </div>
         </div>
         <div class="col-sm">

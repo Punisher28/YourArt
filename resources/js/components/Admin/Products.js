@@ -46,10 +46,10 @@ class Products extends Component {
                             {this.state.data.map((object, index) => (
                                 <tr key={index}>
                                     <td>{object.id}</td>
-                                    <td>{object.login}</td>
-                                    <td>{object.first_name}</td>
-                                    <td>{object.surname}</td>
-                                    <td>{object.email}</td>
+                                    <td>{object.category_id}</td>
+                                    <td>{object.name}</td>
+                                    <td>{object.description}</td>
+                                    <td>{object.user_id}</td>
                                 </tr>
                             ))}
                             </tbody>

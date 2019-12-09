@@ -12,7 +12,7 @@ const Header = () => (
         </Link>
         <ul className="navbar-nav px-3">
             <li className="nav-item text-nowrap">
-                <a className="nav-link" href="${routes.logout}">Sign out</a>
+                <a className="nav-link" href="/">Back</a>
 
 
             </li>

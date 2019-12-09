@@ -5,10 +5,10 @@
             Yaroslav Khas
         </div>
         <div>
-            ©Техніка для бізнесу <br>
+            ©YourArt <br>
             м.Трусавець <br>
             +380979512900 <br>
-            techicfor business@gmail.com <br>
+            yourart.business@gmail.com <br>
         </div>
 
     </div>

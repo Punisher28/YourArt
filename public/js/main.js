@@ -2,7 +2,74 @@ $('.carousel').carousel({
     interval: 2000
 });
 
+$(document).ready(function(){
+    $("#icon-form-tel").click(function() {
+        $("#info-tel").css('display','none');
+        $("#form-tel").css('display','block');
+        $("#icon-form-tel").css('display','none');
+        $("#close-form-tel").css('display','block');
+    });
 
+    $("#form-tel button").click(function() {
+        $("#info-tel").css('display','block');
+        $("#form-tel").css('display','none');
+        $("#close-form-tel").css('display','none');
+        $("#icon-form-tel").css('display','block');
+
+    });
+
+    ///location
+    $("#icon-form-city").click(function() {
+        $("#info-city").css('display','none');
+        $("#form-city").css('display','block');
+        $("#icon-form-city").css('display','none');
+        $("#close-form-city").css('display','block');
+    });
+
+    $("#form-city button").click(function() {
+        $("#info-city").css('display','block');
+        $("#form-city").css('display','none');
+        $("#close-form-city").css('display','none');
+        $("#icon-form-city").css('display','block');
+
+    });
+    //birthday
+    $("#icon-form-birthday").click(function() {
+        $("#info-birthday").css('display','none');
+        $("#form-birthday").css('display','block');
+        $("#icon-form-birthday").css('display','none');
+        $("#close-form-birthday").css('display','block');
+    });
+
+    $("#form-birthday button").click(function() {
+        $("#info-birthday").css('display','block');
+        $("#form-birthday").css('display','none');
+        $("#close-form-birthday").css('display','none');
+        $("#icon-form-birthday").css('display','block');
+
+    });
+    //close
+    $("#close-form-tel").click(function() {
+        $("#info-tel").css('display', 'block');
+        $("#form-tel").css('display', 'none');
+        $("#close-form-tel").css('display', 'none');
+        $("#icon-form-tel").css('display', 'block');
+    });
+        //city
+    $("#close-form-city").click(function() {
+        $("#info-city").css('display', 'block');
+        $("#form-city").css('display', 'none');
+        $("#close-form-city").css('display', 'none');
+        $("#icon-form-city").css('display', 'block');
+    });
+        //birthday
+    $("#close-form-birthday").click(function() {
+        $("#info-birthday").css('display','block');
+        $("#form-birthday").css('display','none');
+        $("#close-form-birthday").css('display','none');
+        $("#icon-form-birthday").css('display','block');
+    });
+});
 // layout Masonry after each image loads
 $('.grid-item').on('change', function(){
     var $grid = $('.grid').masonry({

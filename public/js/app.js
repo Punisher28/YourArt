@@ -67752,7 +67752,7 @@ if (false) {} else {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -73927,8 +73927,8 @@ var Header = function Header() {
     className: "nav-item text-nowrap"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav-link",
-    href: "${routes.logout}"
-  }, "Sign out"))));
+    href: "/"
+  }, "Back"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -74141,7 +74141,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "id"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Category"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Description"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Author"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, this.state.data.map(function (object, index) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
           key: index
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.login), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.first_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.surname), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.email));
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.category_id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.description), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.user_id));
       }))))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Spinner__WEBPACK_IMPORTED_MODULE_2__["default"], null);
     }
   }]);
@@ -74796,9 +74796,7 @@ function (_Component) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
           key: index
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.login), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.first_name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.surname), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.email), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.ip_address), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.payment_verified), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.tel_number));
-      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "btn btn-primary"
-      }, "Add user")) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Spinner__WEBPACK_IMPORTED_MODULE_2__["default"], null);
+      }))))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Spinner__WEBPACK_IMPORTED_MODULE_2__["default"], null);
     }
   }]);
 
@@ -74892,8 +74890,8 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/yaroslav/www/yourart/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/yaroslav/www/yourart/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\Server\OSPanel\domains\YourArt\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\Server\OSPanel\domains\YourArt\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

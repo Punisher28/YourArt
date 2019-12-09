@@ -256,5 +256,33 @@ opacity: 1;
 }
 
 
+/*****PROFILE***/
+#form-tel{
+    display: none;
+}
+#form-city{
+    display: none;
+}
+#form-birthday{
+    display: none;
+}
+
+#close-form-birthday{
+    display: none;
+}
+#close-form-tel{
+    display: none;
+}
+#close-form-city{
+    display: none;
+}
+/****ARTICLE****/
+.card-img-top{
+    width: 100%!important;
+    height: 200px!important;
+    object-fit: cover;
+}
+
+
 
 
