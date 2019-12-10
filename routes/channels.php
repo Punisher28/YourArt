@@ -14,3 +14,9 @@
 Broadcast::channel('App.User.{id}', function ($user, $id) {
     return (int) $user->id === (int) $id;
 });
+Broadcast::routes(['middleware' => ['web', 'auth']]);
+Broadcast::channel('channel-id-item', function () {
+    return [
+        'id' => 'test id',
+    ];
+});

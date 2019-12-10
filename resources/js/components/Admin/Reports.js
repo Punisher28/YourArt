@@ -12,7 +12,7 @@ class Reports extends Component {
     }
 
     componentWillMount() {
-        axios.get('https://testyourart.herokuapp.com/admin/reports')
+        axios.get('https://myapp.loc/admin/reports')
             .then(res => {
                 this.setState({data: res.data})
                 console.log(this.state.data)

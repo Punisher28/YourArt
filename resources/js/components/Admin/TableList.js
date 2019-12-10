@@ -12,7 +12,7 @@ class TableList extends Component {
     }
 
     componentWillMount() {
-        axios.get('https://testyourart.herokuapp.com/admin/table_list')
+        axios.get('https://myapp.loc/admin/table_list')
             .then(res => {
                 this.setState({data: res.data})
                 console.log(this.state.data)

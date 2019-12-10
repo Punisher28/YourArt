@@ -12,7 +12,7 @@ class Users extends Component {
     }
 
     componentWillMount() {
-        axios.get('https://testyourart.herokuapp.com/admin/users')
+        axios.get('https://myapp.loc/admin/users')
             .then(res => {
                 this.setState({data: res.data})
                 console.log(this.state.data)
