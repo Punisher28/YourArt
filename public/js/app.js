@@ -73998,7 +73998,7 @@ function (_Component) {
     value: function componentWillMount() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('http://127.0.0.1:8000/admin/orders').then(function _callee(res) {
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('https://testyourart.herokuapp.com/admin/orders').then(function _callee(res) {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -74111,7 +74111,7 @@ function (_Component) {
     value: function componentWillMount() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://127.0.0.1:8000/admin/products').then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('https://testyourart.herokuapp.com/admin/products').then(function (res) {
         if (res.data) {
           _this2.setState({
             data: res.data
@@ -74212,7 +74212,7 @@ function (_Component) {
     value: function componentWillMount() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://127.0.0.1:8000/admin/reports').then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('https://testyourart.herokuapp.com/admin/reports').then(function (res) {
         _this2.setState({
           data: res.data
         });
@@ -74313,7 +74313,7 @@ function (_Component) {
     value: function componentWillMount() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://127.0.0.1:8000/admin/users').then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('https://testyourart.herokuapp.com/admin/users').then(function (res) {
         _this2.setState({
           data: res.data
         });
@@ -74670,7 +74670,7 @@ function (_Component) {
     value: function componentWillMount() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://127.0.0.1:8000/admin/table_list').then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('https://testyourart.herokuapp.com/admin/table_list').then(function (res) {
         _this2.setState({
           data: res.data
         });
@@ -74768,7 +74768,7 @@ function (_Component) {
     value: function componentWillMount() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('http://127.0.0.1:8000/admin/users').then(function (res) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('https://testyourart.herokuapp.com/admin/users').then(function (res) {
         _this2.setState({
           data: res.data
         });
@@ -74890,8 +74890,8 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Server\OSPanel\domains\YourArt\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\Server\OSPanel\domains\YourArt\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/yarik/www/YourArt/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/yarik/www/YourArt/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
